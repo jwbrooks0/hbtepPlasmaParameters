@@ -4,7 +4,7 @@
   <settings dpi="96">
     <identity>
       <id>d81b1ab8-1d78-4532-897b-3b019993bc5f</id>
-      <revision>79</revision>
+      <revision>80</revision>
     </identity>
     <calculation>
       <precision>4</precision>
@@ -1198,9 +1198,9 @@
         </result>
       </math>
     </region>
-    <region id="79" left="279" top="2286" width="400" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="79" left="279" top="2286" width="400" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
       <text lang="eng">
-        <p>&gt;&gt; 1, which means the electrons ARE "magnetized" </p>
+        <p>&gt;&gt; 1, which means the electrons ARE "magnetized"     (ion Hall parameter)</p>
       </text>
     </region>
     <region id="80" left="18" top="2331" width="376" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
@@ -1409,9 +1409,9 @@
         </result>
       </math>
     </region>
-    <region id="89" left="279" top="2673" width="360" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="89" left="279" top="2673" width="360" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
       <text lang="eng">
-        <p>&gt;&gt; 1, which means the ions ARE "magnetized" </p>
+        <p>&gt;&gt; 1, which means the ions ARE "magnetized"     (electron Hall parameter)</p>
       </text>
     </region>
     <region id="90" left="18" top="2718" width="280" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
