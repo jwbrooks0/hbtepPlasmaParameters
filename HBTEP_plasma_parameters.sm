@@ -4,7 +4,7 @@
   <settings dpi="96">
     <identity>
       <id>d81b1ab8-1d78-4532-897b-3b019993bc5f</id>
-      <revision>80</revision>
+      <revision>84</revision>
     </identity>
     <calculation>
       <precision>4</precision>
@@ -48,11 +48,11 @@
         <p bold="true" underline="true">Constants</p>
       </text>
     </region>
-    <region id="4" left="18" top="162" width="134" height="54" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="4" left="18" top="162" width="150" height="54" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">n_0</e>
-          <e type="operand">2</e>
+          <e type="operand">0.5</e>
           <e type="operand">10</e>
           <e type="operand">19</e>
           <e type="operator" args="2">^</e>
@@ -153,7 +153,7 @@
       <math>
         <input>
           <e type="operand">kT_e</e>
-          <e type="operand">100</e>
+          <e type="operand">160</e>
           <e type="operand">eV</e>
           <e type="operator" args="2">*</e>
           <e type="operator" args="2">:</e>
@@ -193,13 +193,13 @@
         </result>
       </math>
     </region>
-    <region id="14" left="18" top="243" width="104" height="25" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="14" left="18" top="243" width="100" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">kT_i</e>
-          <e type="operand">50</e>
-          <e type="operand">eV</e>
-          <e type="operator" args="2">*</e>
+          <e type="operand">kT_e</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">/</e>
           <e type="operator" args="2">:</e>
         </input>
       </math>
@@ -218,18 +218,7 @@
         <p>adiabatic index</p>
       </text>
     </region>
-    <region id="17" left="18" top="261" width="122" height="25" color="#000000" bgColor="#ffffff" fontSize="10">
-      <math>
-        <input>
-          <e type="operand">r_minor</e>
-          <e type="operand">15</e>
-          <e type="operand" style="unit">cm</e>
-          <e type="operator" args="2">*</e>
-          <e type="operator" args="2">:</e>
-        </input>
-      </math>
-    </region>
-    <region id="18" left="279" top="270" width="174" height="41" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="17" left="279" top="270" width="174" height="41" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand" style="unit">m.p</e>
@@ -246,7 +235,7 @@
         </result>
       </math>
     </region>
-    <region id="19" left="531" top="270" width="144" height="44" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="18" left="531" top="270" width="144" height="44" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand" style="unit">c</e>
@@ -264,7 +253,18 @@
         </result>
       </math>
     </region>
-    <region id="20" left="18" top="279" width="122" height="25" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="19" left="18" top="279" width="122" height="25" color="#000000" bgColor="#ffffff" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">r_minor</e>
+          <e type="operand">15</e>
+          <e type="operand" style="unit">cm</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region id="20" left="18" top="297" width="122" height="25" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">r_major</e>
@@ -275,18 +275,7 @@
         </input>
       </math>
     </region>
-    <region id="21" left="18" top="297" width="90" height="25" color="#000000" bgColor="#ffffff" fontSize="10">
-      <math>
-        <input>
-          <e type="operand">I_p</e>
-          <e type="operand">13</e>
-          <e type="operand" style="unit">kA</e>
-          <e type="operator" args="2">*</e>
-          <e type="operator" args="2">:</e>
-        </input>
-      </math>
-    </region>
-    <region id="22" left="279" top="306" width="310" height="41" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="21" left="279" top="306" width="310" height="41" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">m_deu_ion</e>
@@ -305,6 +294,17 @@
           <e type="operand" style="unit">kg</e>
           <e type="operator" args="2">*</e>
         </result>
+      </math>
+    </region>
+    <region id="22" left="18" top="315" width="90" height="25" color="#000000" bgColor="#ffffff" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">I_p</e>
+          <e type="operand">14</e>
+          <e type="operand" style="unit">kA</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
       </math>
     </region>
     <region id="23" left="0" top="360" width="188" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
@@ -399,7 +399,7 @@
           <e type="operator" args="2">/</e>
         </contract>
         <result action="numeric">
-          <e type="operand">4.1488</e>
+          <e type="operand">2.0744</e>
           <e type="operand">10</e>
           <e type="operand">9</e>
           <e type="operator" args="2">^</e>
@@ -429,7 +429,7 @@
           <e type="operator" args="2">/</e>
         </contract>
         <result action="numeric">
-          <e type="operand">2.5229</e>
+          <e type="operand">1.2615</e>
           <e type="operand">10</e>
           <e type="operand">11</e>
           <e type="operator" args="2">^</e>
@@ -462,7 +462,7 @@
           <e type="operator" args="2">/</e>
         </contract>
         <result action="numeric">
-          <e type="operand">2.5233</e>
+          <e type="operand">1.2616</e>
           <e type="operand">10</e>
           <e type="operand">11</e>
           <e type="operator" args="2">^</e>
@@ -475,7 +475,7 @@
         <p>lower hybrid frequency</p>
       </text>
     </region>
-    <region id="34" left="45" top="711" width="342" height="93" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="34" left="45" top="711" width="334" height="93" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">ω_lh</e>
@@ -505,7 +505,7 @@
           <e type="operator" args="2">/</e>
         </contract>
         <result action="numeric">
-          <e type="operand">9.8358</e>
+          <e type="operand">9.099</e>
           <e type="operand">10</e>
           <e type="operand">8</e>
           <e type="operator" args="2">^</e>
@@ -536,7 +536,7 @@
           <e type="operator" args="2">:</e>
         </input>
         <result action="numeric">
-          <e type="operand">68960.8598</e>
+          <e type="operand">87229.3545</e>
           <e type="operand" style="unit">m</e>
           <e type="operand" style="unit">s</e>
           <e type="operator" args="2">/</e>
@@ -562,7 +562,7 @@
           <e type="operator" args="2">/</e>
         </contract>
         <result action="numeric">
-          <e type="operand">5.9306</e>
+          <e type="operand">7.5017</e>
           <e type="operand">10</e>
           <e type="operand">6</e>
           <e type="operator" args="2">^</e>
@@ -575,7 +575,7 @@
         <p>ion sound speed</p>
       </text>
     </region>
-    <region id="40" left="54" top="1062" width="294" height="55" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="40" left="54" top="1062" width="296" height="55" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">C_s</e>
@@ -592,7 +592,11 @@
           <e type="operator" args="2">:</e>
         </input>
         <result action="numeric">
-          <e type="operand">81595.5897</e>
+          <e type="operand">1.0321</e>
+          <e type="operand">10</e>
+          <e type="operand">5</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
           <e type="operand" style="unit">m</e>
           <e type="operand" style="unit">s</e>
           <e type="operator" args="2">/</e>
@@ -620,7 +624,7 @@
           <e type="operator" args="2">:</e>
         </input>
         <result action="numeric">
-          <e type="operand">1.2029</e>
+          <e type="operand">2.4057</e>
           <e type="operand">10</e>
           <e type="operand">6</e>
           <e type="operator" args="2">^</e>
@@ -657,7 +661,7 @@
           <e type="operand" style="unit">mm</e>
         </contract>
         <result action="numeric">
-          <e type="operand">4.1427</e>
+          <e type="operand">5.2401</e>
         </result>
       </math>
     </region>
@@ -674,7 +678,7 @@
           <e type="operand" style="unit">mm</e>
         </contract>
         <result action="numeric">
-          <e type="operand">0.0963</e>
+          <e type="operand">0.1219</e>
         </result>
       </math>
     </region>
@@ -703,7 +707,7 @@
           <e type="operand" style="unit">μm</e>
         </contract>
         <result action="numeric">
-          <e type="operand">16.6219</e>
+          <e type="operand">42.0504</e>
         </result>
       </math>
     </region>
@@ -719,7 +723,7 @@
         <p underline="true">Time_scales</p>
       </text>
     </region>
-    <region id="51" left="63" top="1440" width="304" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="51" left="63" top="1440" width="296" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">t_Alfven_minor</e>
@@ -732,7 +736,7 @@
           <e type="operand" style="unit">ns</e>
         </contract>
         <result action="numeric">
-          <e type="operand">124.7015</e>
+          <e type="operand">62.3508</e>
         </result>
       </math>
     </region>
@@ -749,7 +753,7 @@
           <e type="operand" style="unit">ns</e>
         </contract>
         <result action="numeric">
-          <e type="operand">764.836</e>
+          <e type="operand">382.418</e>
         </result>
       </math>
     </region>
@@ -776,9 +780,9 @@
           <e type="operator" args="2">:</e>
         </input>
         <result action="numeric">
-          <e type="operand">3.8473</e>
+          <e type="operand">1.5573</e>
           <e type="operand">10</e>
-          <e type="operand">5</e>
+          <e type="operand">6</e>
           <e type="operator" args="2">^</e>
           <e type="operator" args="2">*</e>
         </result>
@@ -819,8 +823,8 @@
         </result>
       </math>
     </region>
-    <region id="59" left="297" top="1656" width="396" height="65" color="#000000" bgColor="#ffffff" fontSize="10">
-      <math decimalPlaces="1">
+    <region id="59" left="297" top="1656" width="404" height="65" color="#000000" bgColor="#ffffff" fontSize="10">
+      <math decimalPlaces="2">
         <input>
           <e type="operand">n_G</e>
           <e type="operand">I_p</e>
@@ -859,7 +863,7 @@
           <e type="operator" args="2">^</e>
         </contract>
         <result action="numeric">
-          <e type="operand">1.8</e>
+          <e type="operand">1.98</e>
           <e type="operand">10</e>
           <e type="operand">19</e>
           <e type="operator" args="2">^</e>
@@ -886,12 +890,24 @@
         </result>
       </math>
     </region>
-    <region id="62" left="18" top="1737" width="232" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="62" left="540" top="1728" width="100" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">1</e>
+          <e type="operand">ε</e>
+          <e type="operator" args="2">/</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">6.1333</e>
+        </result>
+      </math>
+    </region>
+    <region id="63" left="18" top="1737" width="232" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
       <text lang="eng">
         <p>Inverse tokamak aspect ratio</p>
       </text>
     </region>
-    <region id="63" left="297" top="1782" width="272" height="44" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="64" left="297" top="1782" width="272" height="44" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">D_B</e>
@@ -905,7 +921,7 @@
           <e type="operator" args="2">:</e>
         </input>
         <result action="numeric">
-          <e type="operand">1.0524</e>
+          <e type="operand">1.6838</e>
           <e type="operand">10</e>
           <e type="operand">18</e>
           <e type="operator" args="1">-</e>
@@ -920,12 +936,12 @@
         </result>
       </math>
     </region>
-    <region id="64" left="18" top="1791" width="216" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="65" left="18" top="1791" width="216" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
       <text lang="eng">
         <p>Bohm diffusion coefficient</p>
       </text>
     </region>
-    <region id="65" left="297" top="1827" width="220" height="59" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="66" left="297" top="1827" width="220" height="59" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">β</e>
@@ -943,26 +959,26 @@
           <e type="operator" args="2">:</e>
         </input>
         <result action="numeric">
-          <e type="operand">0.0066</e>
+          <e type="operand">0.0026</e>
         </result>
       </math>
     </region>
-    <region id="66" left="18" top="1845" width="48" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="67" left="18" top="1845" width="48" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
       <text lang="eng">
         <p>Beta </p>
       </text>
     </region>
-    <region id="67" left="0" top="1890" width="118" height="29" color="#000000" bgColor="#ffffff" fontSize="14">
+    <region id="68" left="0" top="1890" width="118" height="29" color="#000000" bgColor="#ffffff" fontSize="14">
       <text lang="eng">
         <p underline="true">Collisions</p>
       </text>
     </region>
-    <region id="68" left="18" top="1926" width="144" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="69" left="18" top="1926" width="144" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
       <text lang="eng">
         <p>Coulomb logarithm</p>
       </text>
     </region>
-    <region id="69" left="234" top="1926" width="211" height="27" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="70" left="234" top="1926" width="211" height="27" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">lnΛ</e>
@@ -975,16 +991,16 @@
           <e type="operator" args="2">:</e>
         </input>
         <result action="numeric">
-          <e type="operand">15.3913</e>
+          <e type="operand">16.7895</e>
         </result>
       </math>
     </region>
-    <region id="70" left="18" top="1962" width="416" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="71" left="18" top="1962" width="416" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
       <text lang="eng">
         <p>Electron Collision frequencies   -   [Fitzpatrick] </p>
       </text>
     </region>
-    <region id="71" left="54" top="1980" width="392" height="87" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="72" left="54" top="1980" width="392" height="87" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">τ_ee</e>
@@ -1025,9 +1041,9 @@
           <e type="operator" args="2">:</e>
         </input>
         <result action="numeric">
-          <e type="operand">2.2345</e>
+          <e type="operand">1.6592</e>
           <e type="operand">10</e>
-          <e type="operand">6</e>
+          <e type="operand">5</e>
           <e type="operator" args="1">-</e>
           <e type="operator" args="2">^</e>
           <e type="operator" args="2">*</e>
@@ -1036,7 +1052,7 @@
         </result>
       </math>
     </region>
-    <region id="72" left="54" top="2061" width="384" height="87" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="73" left="54" top="2061" width="384" height="87" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">τ_ei</e>
@@ -1077,7 +1093,7 @@
           <e type="operator" args="2">:</e>
         </input>
         <result action="numeric">
-          <e type="operand">1.1172</e>
+          <e type="operand">8.2958</e>
           <e type="operand">10</e>
           <e type="operand">6</e>
           <e type="operator" args="1">-</e>
@@ -1088,7 +1104,7 @@
         </result>
       </math>
     </region>
-    <region id="73" left="54" top="2142" width="230" height="44" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="74" left="54" top="2142" width="222" height="44" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">ν_ee</e>
@@ -1105,15 +1121,15 @@
           <e type="operator" args="2">/</e>
         </contract>
         <result action="numeric">
-          <e type="operand">2.8119</e>
+          <e type="operand">3.787</e>
           <e type="operand">10</e>
-          <e type="operand">6</e>
+          <e type="operand">5</e>
           <e type="operator" args="2">^</e>
           <e type="operator" args="2">*</e>
         </result>
       </math>
     </region>
-    <region id="74" left="54" top="2187" width="230" height="44" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="75" left="54" top="2187" width="230" height="44" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">ν_ei</e>
@@ -1130,15 +1146,15 @@
           <e type="operator" args="2">/</e>
         </contract>
         <result action="numeric">
-          <e type="operand">5.6239</e>
+          <e type="operand">7.5739</e>
           <e type="operand">10</e>
-          <e type="operand">6</e>
+          <e type="operand">5</e>
           <e type="operator" args="2">^</e>
           <e type="operator" args="2">*</e>
         </result>
       </math>
     </region>
-    <region id="75" left="54" top="2232" width="268" height="44" border="true" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="76" left="54" top="2232" width="268" height="44" border="true" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">ν_e</e>
@@ -1153,7 +1169,7 @@
           <e type="operator" args="2">/</e>
         </contract>
         <result action="numeric">
-          <e type="operand">8.4358</e>
+          <e type="operand">1.1361</e>
           <e type="operand">10</e>
           <e type="operand">6</e>
           <e type="operator" args="2">^</e>
@@ -1161,7 +1177,7 @@
         </result>
       </math>
     </region>
-    <region id="76" left="423" top="2232" width="170" height="44" border="true" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="77" left="423" top="2232" width="170" height="44" border="true" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">ν_e</e>
@@ -1171,9 +1187,9 @@
           <e type="operator" args="2">/</e>
         </input>
         <result action="numeric">
-          <e type="operand">1.3426</e>
+          <e type="operand">1.8081</e>
           <e type="operand">10</e>
-          <e type="operand">6</e>
+          <e type="operand">5</e>
           <e type="operator" args="2">^</e>
           <e type="operator" args="2">*</e>
           <e type="operand" style="unit">Hz</e>
@@ -1181,12 +1197,12 @@
         </result>
       </math>
     </region>
-    <region id="77" left="360" top="2241" width="32" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="78" left="360" top="2241" width="32" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
       <text lang="eng">
         <p>or </p>
       </text>
     </region>
-    <region id="78" left="54" top="2277" width="148" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="79" left="54" top="2277" width="156" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">ω_ce</e>
@@ -1194,21 +1210,21 @@
           <e type="operator" args="2">/</e>
         </input>
         <result action="numeric">
-          <e type="operand">7297.2897</e>
+          <e type="operand">54184.7506</e>
         </result>
       </math>
     </region>
-    <region id="79" left="279" top="2286" width="400" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="80" left="279" top="2286" width="400" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
       <text lang="eng">
         <p>&gt;&gt; 1, which means the electrons ARE "magnetized"     (ion Hall parameter)</p>
       </text>
     </region>
-    <region id="80" left="18" top="2331" width="376" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="81" left="18" top="2331" width="376" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
       <text lang="eng">
         <p>Ion Collision frequencies   -   [Fitzpatrick] </p>
       </text>
     </region>
-    <region id="81" left="54" top="2349" width="448" height="87" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="82" left="54" top="2349" width="410" height="87" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">τ_ii</e>
@@ -1249,18 +1265,13 @@
           <e type="operator" args="2">:</e>
         </input>
         <result action="numeric">
-          <e type="operand">4.812</e>
-          <e type="operand">10</e>
-          <e type="operand">5</e>
-          <e type="operator" args="1">-</e>
-          <e type="operator" args="2">^</e>
-          <e type="operator" args="2">*</e>
+          <e type="operand">0.0004</e>
           <e type="operand" style="unit">s</e>
           <e type="operator" args="2">*</e>
         </result>
       </math>
     </region>
-    <region id="82" left="54" top="2430" width="388" height="93" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="83" left="54" top="2430" width="388" height="93" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">τ_ie</e>
@@ -1301,13 +1312,13 @@
           <e type="operator" args="2">:</e>
         </input>
         <result action="numeric">
-          <e type="operand">0.0015</e>
+          <e type="operand">0.0108</e>
           <e type="operand" style="unit">s</e>
           <e type="operator" args="2">*</e>
         </result>
       </math>
     </region>
-    <region id="83" left="54" top="2520" width="230" height="44" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="84" left="54" top="2520" width="220" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">ν_ii</e>
@@ -1324,15 +1335,11 @@
           <e type="operator" args="2">/</e>
         </contract>
         <result action="numeric">
-          <e type="operand">1.3057</e>
-          <e type="operand">10</e>
-          <e type="operand">5</e>
-          <e type="operator" args="2">^</e>
-          <e type="operator" args="2">*</e>
+          <e type="operand">17610.392</e>
         </result>
       </math>
     </region>
-    <region id="84" left="54" top="2565" width="220" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="85" left="54" top="2565" width="212" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">ν_ie</e>
@@ -1349,11 +1356,11 @@
           <e type="operator" args="2">/</e>
         </contract>
         <result action="numeric">
-          <e type="operand">4294.3807</e>
+          <e type="operand">579.1818</e>
         </result>
       </math>
     </region>
-    <region id="85" left="54" top="2610" width="268" height="44" border="true" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="86" left="54" top="2610" width="266" height="43" border="true" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">ν_i</e>
@@ -1368,15 +1375,11 @@
           <e type="operator" args="2">/</e>
         </contract>
         <result action="numeric">
-          <e type="operand">1.3487</e>
-          <e type="operand">10</e>
-          <e type="operand">5</e>
-          <e type="operator" args="2">^</e>
-          <e type="operator" args="2">*</e>
+          <e type="operand">18189.5737</e>
         </result>
       </math>
     </region>
-    <region id="86" left="423" top="2610" width="168" height="43" border="true" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="87" left="423" top="2610" width="160" height="43" border="true" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">ν_i</e>
@@ -1386,18 +1389,18 @@
           <e type="operator" args="2">/</e>
         </input>
         <result action="numeric">
-          <e type="operand">21464.8722</e>
+          <e type="operand">2894.9606</e>
           <e type="operand" style="unit">Hz</e>
           <e type="operator" args="2">*</e>
         </result>
       </math>
     </region>
-    <region id="87" left="360" top="2619" width="32" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="88" left="360" top="2619" width="32" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
       <text lang="eng">
         <p>or </p>
       </text>
     </region>
-    <region id="88" left="54" top="2664" width="140" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="89" left="54" top="2664" width="140" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">ω_ci</e>
@@ -1405,21 +1408,21 @@
           <e type="operator" args="2">/</e>
         </input>
         <result action="numeric">
-          <e type="operand">123.4278</e>
+          <e type="operand">915.1635</e>
         </result>
       </math>
     </region>
-    <region id="89" left="279" top="2673" width="360" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="90" left="279" top="2673" width="360" height="40" color="#000000" bgColor="#ffffff" fontSize="10">
       <text lang="eng">
         <p>&gt;&gt; 1, which means the ions ARE "magnetized"     (electron Hall parameter)</p>
       </text>
     </region>
-    <region id="90" left="18" top="2718" width="280" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="91" left="18" top="2718" width="280" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
       <text lang="eng">
         <p>Mean free path (due to collisions)</p>
       </text>
     </region>
-    <region id="91" left="54" top="2745" width="254" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="92" left="54" top="2745" width="262" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">λ_mfp_e</e>
@@ -1433,13 +1436,13 @@
           <e type="operator" args="2">:</e>
         </input>
         <result action="numeric">
-          <e type="operand">4.4173</e>
+          <e type="operand">41.4886</e>
           <e type="operand" style="unit">m</e>
           <e type="operator" args="2">*</e>
         </result>
       </math>
     </region>
-    <region id="92" left="54" top="2781" width="254" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="93" left="54" top="2781" width="262" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">λ_mfp_i</e>
@@ -1453,18 +1456,18 @@
           <e type="operator" args="2">:</e>
         </input>
         <result action="numeric">
-          <e type="operand">3.2127</e>
+          <e type="operand">30.1314</e>
           <e type="operand" style="unit">m</e>
           <e type="operator" args="2">*</e>
         </result>
       </math>
     </region>
-    <region id="93" left="18" top="2853" width="376" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="94" left="18" top="2853" width="376" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
       <text lang="eng">
         <p>Torodial transit frequency (due to collisions)</p>
       </text>
     </region>
-    <region id="94" left="54" top="2880" width="290" height="44" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="95" left="54" top="2880" width="290" height="44" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">τ_φi</e>
@@ -1478,7 +1481,7 @@
           <e type="operator" args="2">:</e>
         </input>
         <result action="numeric">
-          <e type="operand">8.3823</e>
+          <e type="operand">6.6268</e>
           <e type="operand">10</e>
           <e type="operand">5</e>
           <e type="operator" args="1">-</e>
@@ -1489,7 +1492,7 @@
         </result>
       </math>
     </region>
-    <region id="95" left="360" top="2880" width="228" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="96" left="360" top="2880" width="228" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">ν_φi</e>
@@ -1506,11 +1509,11 @@
           <e type="operator" args="2">/</e>
         </contract>
         <result action="numeric">
-          <e type="operand">74957.4563</e>
+          <e type="operand">94814.5158</e>
         </result>
       </math>
     </region>
-    <region id="96" left="54" top="2916" width="290" height="44" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="97" left="54" top="2916" width="290" height="44" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">τ_φe</e>
@@ -1524,7 +1527,7 @@
           <e type="operator" args="2">:</e>
         </input>
         <result action="numeric">
-          <e type="operand">9.7469</e>
+          <e type="operand">7.7056</e>
           <e type="operand">10</e>
           <e type="operand">7</e>
           <e type="operator" args="1">-</e>
@@ -1535,7 +1538,7 @@
         </result>
       </math>
     </region>
-    <region id="97" left="360" top="2916" width="230" height="44" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="98" left="360" top="2916" width="230" height="44" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">ν_φe</e>
@@ -1552,7 +1555,7 @@
           <e type="operator" args="2">/</e>
         </contract>
         <result action="numeric">
-          <e type="operand">6.4464</e>
+          <e type="operand">8.1541</e>
           <e type="operand">10</e>
           <e type="operand">6</e>
           <e type="operator" args="2">^</e>
@@ -1560,7 +1563,7 @@
         </result>
       </math>
     </region>
-    <region id="98" left="54" top="2970" width="124" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="99" left="54" top="2970" width="124" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">ν_φi</e>
@@ -1568,16 +1571,16 @@
           <e type="operator" args="2">/</e>
         </input>
         <result action="numeric">
-          <e type="operand">0.5558</e>
+          <e type="operand">5.2126</e>
         </result>
       </math>
     </region>
-    <region id="99" left="180" top="2979" width="520" height="72" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="100" left="180" top="2979" width="520" height="72" color="#000000" bgColor="#ffffff" fontSize="10">
       <text lang="eng">
         <p>The ions average about order 1 collision per toroidal transit.This means that the ions are largely oblivious to the poloidalvariations to the B (due to tokamak curvature) and that the ionsthink that B is more like a uniform cylinder</p>
       </text>
     </region>
-    <region id="100" left="54" top="3051" width="124" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="101" left="54" top="3051" width="124" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">ν_φe</e>
@@ -1585,31 +1588,31 @@
           <e type="operator" args="2">/</e>
         </input>
         <result action="numeric">
-          <e type="operand">0.7642</e>
+          <e type="operand">7.1773</e>
         </result>
       </math>
     </region>
-    <region id="101" left="180" top="3060" width="144" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="102" left="180" top="3060" width="144" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
       <text lang="eng">
         <p>Same of electrons</p>
       </text>
     </region>
-    <region id="102" left="0" top="3123" width="378" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
+    <region id="103" left="0" top="3123" width="378" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
       <text lang="eng">
         <p underline="true">Conductivity in a homogeneous B field</p>
       </text>
     </region>
-    <region id="103" left="405" top="3123" width="160" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="104" left="405" top="3123" width="160" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
       <text lang="eng">
         <p>-   [Piel, page 91]</p>
       </text>
     </region>
-    <region id="104" left="18" top="3159" width="272" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="105" left="18" top="3159" width="272" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
       <text lang="eng">
         <p>1. Spitzer conductivity (along B)</p>
       </text>
     </region>
-    <region id="105" left="36" top="3177" width="258" height="53" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="106" left="36" top="3177" width="258" height="53" color="#000000" bgColor="#ffffff" fontSize="10">
       <math significantDigitsMode="true" trailingZeros="true">
         <input>
           <e type="operand">σ_i</e>
@@ -1625,7 +1628,7 @@
           <e type="operator" args="2">:</e>
         </input>
         <result action="numeric">
-          <e type="operand">35490</e>
+          <e type="operand">65780</e>
           <e type="operand" style="unit">S</e>
           <e type="operand" style="unit">m</e>
           <e type="operator" args="2">/</e>
@@ -1633,8 +1636,8 @@
         </result>
       </math>
     </region>
-    <region id="106" left="432" top="3186" width="174" height="44" color="#000000" bgColor="#ffffff" fontSize="10">
-      <math>
+    <region id="107" left="432" top="3186" width="182" height="44" color="#000000" bgColor="#ffffff" fontSize="10">
+      <math decimalPlaces="5">
         <input>
           <e type="operand">1</e>
           <e type="operand">σ_i</e>
@@ -1646,7 +1649,7 @@
           <e type="operator" args="2">*</e>
         </contract>
         <result action="numeric">
-          <e type="operand">2.8178</e>
+          <e type="operand">1.52013</e>
           <e type="operand">10</e>
           <e type="operand">5</e>
           <e type="operator" args="1">-</e>
@@ -1655,7 +1658,7 @@
         </result>
       </math>
     </region>
-    <region id="107" left="36" top="3231" width="240" height="59" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="108" left="36" top="3231" width="240" height="59" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">σ_e</e>
@@ -1671,7 +1674,7 @@
           <e type="operator" args="2">:</e>
         </input>
         <result action="numeric">
-          <e type="operand">1.0021</e>
+          <e type="operand">1.8603</e>
           <e type="operand">10</e>
           <e type="operand">5</e>
           <e type="operator" args="2">^</e>
@@ -1683,7 +1686,7 @@
         </result>
       </math>
     </region>
-    <region id="108" left="432" top="3240" width="174" height="44" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="109" left="432" top="3240" width="174" height="44" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">1</e>
@@ -1696,7 +1699,7 @@
           <e type="operator" args="2">*</e>
         </contract>
         <result action="numeric">
-          <e type="operand">9.9787</e>
+          <e type="operand">5.3755</e>
           <e type="operand">10</e>
           <e type="operand">6</e>
           <e type="operator" args="1">-</e>
@@ -1705,12 +1708,12 @@
         </result>
       </math>
     </region>
-    <region id="109" left="18" top="3294" width="624" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="110" left="18" top="3294" width="624" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
       <text lang="eng">
         <p>2. Pederson current conductivity (current along electric field but perp to B)</p>
       </text>
     </region>
-    <region id="110" left="36" top="3312" width="368" height="75" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="111" left="36" top="3312" width="390" height="75" color="#000000" bgColor="#ffffff" fontSize="10">
       <math significantDigitsMode="true" trailingZeros="true">
         <input>
           <e type="operand">σ_i_pederson</e>
@@ -1730,7 +1733,12 @@
           <e type="operator" args="2">:</e>
         </input>
         <result action="numeric">
-          <e type="operand">0.002362</e>
+          <e type="operand">7.964</e>
+          <e type="operand">10</e>
+          <e type="operand">5</e>
+          <e type="operator" args="1">-</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
           <e type="operand" style="unit">S</e>
           <e type="operand" style="unit">m</e>
           <e type="operator" args="2">/</e>
@@ -1738,7 +1746,7 @@
         </result>
       </math>
     </region>
-    <region id="111" left="432" top="3321" width="216" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="112" left="432" top="3321" width="232" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">1</e>
@@ -1751,11 +1759,11 @@
           <e type="operator" args="2">*</e>
         </contract>
         <result action="numeric">
-          <e type="operand">423.3976</e>
+          <e type="operand">12557.2349</e>
         </result>
       </math>
     </region>
-    <region id="112" left="36" top="3384" width="352" height="75" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="113" left="36" top="3384" width="398" height="75" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">σ_e_pederson</e>
@@ -1775,7 +1783,12 @@
           <e type="operator" args="2">:</e>
         </input>
         <result action="numeric">
-          <e type="operand">0.0008</e>
+          <e type="operand">2.8161</e>
+          <e type="operand">10</e>
+          <e type="operand">5</e>
+          <e type="operator" args="1">-</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
           <e type="operand" style="unit">S</e>
           <e type="operand" style="unit">m</e>
           <e type="operator" args="2">/</e>
@@ -1783,7 +1796,7 @@
         </result>
       </math>
     </region>
-    <region id="113" left="432" top="3384" width="224" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="114" left="432" top="3384" width="232" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">1</e>
@@ -1796,16 +1809,16 @@
           <e type="operator" args="2">*</e>
         </contract>
         <result action="numeric">
-          <e type="operand">1195.5852</e>
+          <e type="operand">35510.4376</e>
         </result>
       </math>
     </region>
-    <region id="114" left="18" top="3465" width="480" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="115" left="18" top="3465" width="480" height="24" color="#000000" bgColor="#ffffff" fontSize="10">
       <text lang="eng">
         <p>3. Hall current conductivity (current orthogonalto B and E)</p>
       </text>
     </region>
-    <region id="115" left="36" top="3483" width="312" height="95" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="116" left="36" top="3483" width="312" height="95" color="#000000" bgColor="#ffffff" fontSize="10">
       <math significantDigitsMode="true" trailingZeros="true">
         <input>
           <e type="operand">σ_i_hall</e>
@@ -1828,7 +1841,7 @@
           <e type="operator" args="2">:</e>
         </input>
         <result action="numeric">
-          <e type="operand">9.155</e>
+          <e type="operand">2.289</e>
           <e type="operand" style="unit">S</e>
           <e type="operand" style="unit">m</e>
           <e type="operator" args="2">/</e>
@@ -1836,7 +1849,7 @@
         </result>
       </math>
     </region>
-    <region id="116" left="432" top="3501" width="168" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="117" left="432" top="3501" width="168" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">1</e>
@@ -1849,11 +1862,11 @@
           <e type="operator" args="2">*</e>
         </contract>
         <result action="numeric">
-          <e type="operand">0.1092</e>
+          <e type="operand">0.4369</e>
         </result>
       </math>
     </region>
-    <region id="117" left="36" top="3573" width="320" height="95" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="118" left="36" top="3573" width="320" height="95" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">σ_e_hall</e>
@@ -1876,7 +1889,7 @@
           <e type="operator" args="2">:</e>
         </input>
         <result action="numeric">
-          <e type="operand">9.1553</e>
+          <e type="operand">2.2888</e>
           <e type="operand" style="unit">S</e>
           <e type="operand" style="unit">m</e>
           <e type="operator" args="2">/</e>
@@ -1884,7 +1897,7 @@
         </result>
       </math>
     </region>
-    <region id="118" left="432" top="3591" width="168" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="119" left="432" top="3591" width="168" height="43" color="#000000" bgColor="#ffffff" fontSize="10">
       <math>
         <input>
           <e type="operand">1</e>
@@ -1897,21 +1910,21 @@
           <e type="operator" args="2">*</e>
         </contract>
         <result action="numeric">
-          <e type="operand">0.1092</e>
+          <e type="operand">0.4369</e>
         </result>
       </math>
     </region>
-    <region id="119" left="342" top="3681" width="352" height="88" border="true" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="120" left="342" top="3681" width="352" height="88" border="true" color="#000000" bgColor="#ffffff" fontSize="10">
       <text lang="eng">
         <p>Reference Conductivity/Resistivity values:			  	           Conductivity    ResistivityCopper     6.0e7 S/m       1.7e-8 Ohm*mSteel      1.4e6 S/m       7.1e-7 Ohm*m    </p>
       </text>
     </region>
-    <region id="120" left="0" top="3780" width="108" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
+    <region id="121" left="0" top="3780" width="108" height="27" color="#000000" bgColor="#ffffff" fontSize="12">
       <text lang="eng">
         <p underline="true">References</p>
       </text>
     </region>
-    <region id="121" left="27" top="3807" width="672" height="136" color="#000000" bgColor="#ffffff" fontSize="10">
+    <region id="122" left="27" top="3807" width="672" height="136" color="#000000" bgColor="#ffffff" fontSize="10">
       <text lang="eng">
         <p>* https://www.nrl.navy.mil/ppd/content/nrl-plasma-formulary* [P.M. Bellan, Fundamentals of Plasma Physics (Cambridge University Press, 2008),     Appendix C]* [J. Wesson, Tokamaks, 3rd ed. (Oxford University Press, 2004), Chapter 14]* [Figtzpatrick's online class notes, https://farside.ph.utexas.edu/teaching/     plasma/Plasma/node41.html]* [Piel, Plasma Physics, (Springer 2010)] </p>
       </text>
